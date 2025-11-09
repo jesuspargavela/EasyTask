@@ -1,0 +1,8 @@
+<article class="task-content rounded-border">
+  <h2>{{ task.title }}</h2>
+  <time>{{ task.dueDate | date : 'fullDate' }}</time>
+  <p>{{ task.summary }}</p>
+  <footer>
+    <button class="complete-task rounded-border" (click)="onDeleteTask()">Complete</button>
+  </footer>
+</article>

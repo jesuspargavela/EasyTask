@@ -1,0 +1,36 @@
+textarea {
+  resize: none;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.task-dialog-content-container {
+  color: white;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.no-border {
+  border: none;
+  background-color: rgb(40, 17, 62);
+}
+
+.create-button {
+  padding: 0.2rem;
+  background-color: rgb(125, 27, 216);
+}

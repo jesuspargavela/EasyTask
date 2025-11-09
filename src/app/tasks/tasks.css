@@ -1,0 +1,32 @@
+li {
+  list-style-type: none;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+}
+
+.rounded-border {
+  border-radius: 0.5rem;
+}
+
+.tasks-container {
+  margin-left: -9.9rem;
+  width: 140%;
+  height: fit-content;
+  background-color: rgb(40, 17, 62);
+  padding: 0.7rem;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.add-task {
+  padding: 0.2rem;
+  background-color: rgb(125, 27, 216);
+}
+

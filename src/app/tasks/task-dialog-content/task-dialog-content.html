@@ -1,0 +1,25 @@
+<section class="task-dialog-content-container">
+  <header>
+    <h1>Add Task</h1>
+  </header>
+  <article>
+    <form (ngSubmit)="onSubmit()">
+      <p class="form-control">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" [(ngModel)]="title" />
+      </p>
+      <p class="form-control">
+        <label for="summary">Summary:</label>
+        <textarea name="summary" id="summary" rows="5" [(ngModel)]="summary"></textarea>
+      </p>
+      <p class="form-control">
+        <label for="due-date">Due Date:</label>
+        <input type="date" name="due-date" id="due-date" [(ngModel)]="date" />
+      </p>
+      <footer class="actions">
+        <button type="button" class="no-border" (click)="onCancel()">Cancel</button>
+        <button type="submit" class="create-button">Create</button>
+      </footer>
+    </form>
+  </article>
+</section>

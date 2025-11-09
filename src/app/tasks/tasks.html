@@ -1,0 +1,23 @@
+<section class="tasks-container rounded-border">
+  <header class="tasks-header rounded-border">
+    <h2>{{ profile.name }}'s Tasks</h2>
+    <menu>
+      <button class="add-task rounded-border" (click)="onShowModal()">Add Task</button>
+    </menu>
+  </header>
+  <ul>
+    @for (task of selectedUserTasks; track task.id) {
+    <li>
+      <app-task (delete)="onDeleteTask($event)" [task]="task" />
+    </li>
+    }
+  </ul>
+</section>
+<app-dialog #taskDialog>
+  <app-task-dialog-content
+    (add)="onAddTask($event)"
+    [taskDialog]="taskDialog"
+    [userId]="profile.id"
+    [id]="tasks.length"
+  />
+</app-dialog>
