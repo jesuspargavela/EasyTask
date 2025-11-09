@@ -1,4 +1,8 @@
-# Essentials
+# EasyTask
+
+A task management application that provides a to-do list per username.
+
+## About the Project
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
 
