@@ -1,10 +1,14 @@
 import { Component, Input, ViewChild } from '@angular/core';
+
 import { Dialog } from '../shared/dialog/dialog';
+
 import { Task } from './task/task';
-import { dummyTasks } from '../dummy-tasks';
-import { Profile } from '../profile.model';
 import { TaskDialogContent } from './task-dialog-content/task-dialog-content';
+
+import { Profile } from '../profile.model';
 import { Assignment } from './task/task.model';
+
+import { TaskService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
@@ -17,10 +21,14 @@ export class Tasks {
 
   @ViewChild('taskDialog') taskDialog!: Dialog;
 
-  tasks = dummyTasks;
+  constructor(private tasksService: TaskService) { }
 
-  get selectedUserTasks() {
-    return this.tasks.filter(task => task.userId === this.profile.id);
+  get tasksLength(): number {
+    return this.tasksService.taskLength;
+  }
+
+  get selectedUserTasks(): Assignment[] {
+    return this.tasksService.getUserTasks(this.profile.id);
   }
 
   onShowModal(): void {
@@ -28,10 +36,10 @@ export class Tasks {
   }
 
   onAddTask(task: Assignment): void {
-    this.tasks.push(task);
+    this.tasksService.addTask(task);
   }
 
   onDeleteTask(id: string): void {
-    this.tasks = this.tasks.filter(task => task.id !== id);
+    this.tasksService.deleteTask(id);
   }
 }

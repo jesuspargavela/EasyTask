@@ -1,7 +1,9 @@
 import {
-  Component, EventEmitter, Input, /* signal */
-  Output,
-  ViewChild
+  Component,
+  EventEmitter,
+  /* inject, */
+  Input, /* signal */
+  Output
 } from '@angular/core';
 import { Dialog } from '../../shared/dialog/dialog';
 import { Assignment } from '../task/task.model';
@@ -26,6 +28,8 @@ export class TaskDialogContent {
   date = '';
   //date = signal('');
 
+  //private taskService = inject(TaskService);
+
   onCancel(): void {
     this.taskDialog.closeModal();
   }
@@ -42,7 +46,6 @@ export class TaskDialogContent {
       summary: this.summary,
       dueDate: this.date
     };
-
 
     this.add.emit(task);
 
