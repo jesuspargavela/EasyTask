@@ -5,13 +5,14 @@ import {
   Input, /* signal */
   Output
 } from '@angular/core';
+
 import { Dialog } from '../../shared/dialog/dialog';
+
 import { Assignment } from '../task/task.model';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-task-dialog-content',
-  imports: [FormsModule],
+  standalone: false,
   templateUrl: './task-dialog-content.html',
   styleUrl: './task-dialog-content.css',
 })

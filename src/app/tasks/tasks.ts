@@ -2,9 +2,6 @@ import { Component, Input, ViewChild } from '@angular/core';
 
 import { Dialog } from '../shared/dialog/dialog';
 
-import { Task } from './task/task';
-import { TaskDialogContent } from './task-dialog-content/task-dialog-content';
-
 import { Profile } from '../profile.model';
 import { Assignment } from './task/task.model';
 
@@ -12,7 +9,7 @@ import { TaskService } from './tasks.service';
 
 @Component({
   selector: 'app-tasks',
-  imports: [Dialog, Task, TaskDialogContent],
+  standalone: false,
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
 })

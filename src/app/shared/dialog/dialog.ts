@@ -1,9 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Assignment } from '../../tasks/task/task.model';
 
 @Component({
   selector: 'app-dialog',
-  imports: [],
+  standalone: false,
   templateUrl: './dialog.html',
   styleUrl: './dialog.css',
 })

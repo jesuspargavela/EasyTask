@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, /* input, computed, signal, output */ } from '@angular/core';
+
 import { UserObject } from './user.model';
 
 /* import { DUMMY_USERS } from '../dummy-users';*/
@@ -6,7 +7,7 @@ import { UserObject } from './user.model';
 
 @Component({
   selector: 'app-user',
-  imports: [],
+  standalone: false,
   templateUrl: './user.html',
   styleUrl: './user.css',
 })

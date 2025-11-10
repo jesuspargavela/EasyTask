@@ -1,14 +1,12 @@
 import { Component, signal } from '@angular/core';
-import { Header } from './header/header';
-import { User } from './user/user';
-import { Tasks } from './tasks/tasks';
+
 import { DUMMY_USERS } from './dummy-users';
-import { NgFor, NgIf } from '@angular/common';
+
 import { Profile } from './profile.model';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, User, Tasks, NgFor, NgIf],
+  standalone: false,
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
